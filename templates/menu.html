@@ -7,17 +7,15 @@
             {% if request.user.is_authenticated and request.user.is_admin %}
 
 
-                        <a class="menubutton1">Главная</a>
-                        <a class="menubutton1">Мои питомцы</a>
-                        <a class="menubutton1">Нейросеть</a>
-                        <a class="menubutton1">Аккаунт</a>
+                        <a href="{% url 'pets:main' %}" class="menubutton1">Главная</a>
+                        <a href="{% url 'pets:pets_owner_list' %}" class="menubutton1">Мои питомцы</a>
+                        <a href="{% url 'pets:neuron_network' %}" class="menubutton1">Нейросеть</a>
 
             {% elif request.user.is_authenticated %}
 
-                        <a class="menubutton1">Главная</a>
-                        <a class="menubutton1">Мои питомцы</a>
-                        <a class="menubutton1">Нейросеть</a>
-                        <a class="menubutton1">Аккаунт</a>
+                        <a href="{% url 'pets:main' %}" class="menubutton1">Главная</a>
+                        <a href="{% url 'pets:pets_owner_list' %}" class="menubutton1">Мои питомцы</a>
+                        <a href="{% url 'pets:neuron_network' %}" class="menubutton1">Нейросеть</a>
 
             {% else %}
                         <a href="{% url 'accounts:login' %}" class="menubutton1">Вход</a>
