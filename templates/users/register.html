@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+<title>{% block title %}Регистрация{% endblock %}</title>
+
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+{% block content %}
+
+    {% include 'menu.html' %}
+
+        <div class="login_div">
+            <div class="login_div3">
+                <p class="register_name">Регистрация</p>
+                    <form method="POST" class="login_form" action="">{% csrf_token %}
+                            <div>
+                                {{ form.as_p }}
+                            </div>
+                            <button class="login_button" type="submit"><p class="text_button">Зарегестрироваться</p></button>
+                    </form>
+            </div>
+            <div class="login_div2">
+            </div>
+        </div>
+
+{% endblock %}

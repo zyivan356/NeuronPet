@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+<title>{% block title %}НРЖ{% endblock %}</title>
+
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+{% block content %}
+
+    {% include 'menu.html' %}
+
+        <div class="owner_list_main">
+            <button class="owner_list_button"><a href="" class="owner_list_button_text">Добавить</a></button>
+            {% for pet in pet %}
+                <div class="owner_list_div">
+                    <img class="owner_list_pet_image" src="{{ pet.image.url }}">
+                    <div class="owner_list_pet_name_div">
+                        <a class="owner_list_pet_name" href="{{ pet.get_absolute_url }}">{{ pet.name }}</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+<title>{% block title %}НРЖ{% endblock %}</title>
+
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+{% block content %}
+
+    {% include 'menu.html' %}
+
+        <div class="home">
+            <div class="home1">
+                <p class="home_text1">Распознование кошек и собак.</p>
+                <p class="home_text2">Наша нейросеть способна классифицировать вид питомца.</p>
+                <button class="button_home1"><a href="{% url 'accounts:register' %}" class="button_a_home1">Начать</a></button>
+            </div>
+            <div class="home2">
+                <div class="img_div_home1">
+                    <img src="{% static 'main/images/4.jpg' %}" class="img_home1">
+                </div>
+                <div class="img_div_home2">
+                    <img src="{% static 'main/images/6.jpg' %}" class="img_home2">
+                </div>
+            </div>
+        </div>
+        <div class="home3">
+            <div class="img_div_home3">
+                <img src="{% static 'main/images/7.jpg' %}" class="img_home3_1">
+            </div>
+            <div class="img_div_home4">
+                <p class="home_text3">Создайте профиль своего питомца</p>
+                <p class="home_text4">Загрузите картинку своего питомца, укажите данные о нём и сохраните их для дальнейшего просмотра.</p>
+            </div>
+            <div class="img_div_home5">
+                <div class="circle_green">
+
+                    <div class="circle_red"></div>
+                </div>
+            </div>
+        </div>
+        <div class="home4">
+            <img src="{% static 'main/images/3.jpg' %}" class="footer_dog">
+            <div class="footer_dog_div">
+                <p class="footer_text1">Распознать вашего питомца</br> — как?</p>
+                <p class="footer_text2">Вы можете распознать вашего питомца, нажав на кнопку "Нейросеть".</p>
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}
+

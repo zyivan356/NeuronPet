@@ -1,0 +1,463 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+a{
+    text-decoration: none;
+}
+.menubuttons{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 100px;
+}
+
+.hr_main{
+    background-color: #0e0073;
+    height: 1px;
+}
+.site_name{
+    color: #0e0073;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    line-height: 3em;
+    font-weight: bold;
+}
+.site_name2{
+    color: #0e0073;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.menubutton1{
+    color: #0e0073;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 10%;
+}
+.home1{
+    float: left;
+    height: 850px;
+    width: 50%;
+}
+.home2{
+    float: left;
+    height: 850px;
+    width: 50%;
+}
+.home_text1{
+    color: #0e0073;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 54px;
+    font-weight: bold;
+    margin-left: 20%;
+    margin-top: 250px;
+}
+.home_text2{
+    color: #565570;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 20%;
+    margin-top: 30px;
+    line-height: 2em;
+}
+.img_home1{
+    width: 350px;
+    height: 550px;
+    border: white;
+    border-radius: 200px;
+}
+.img_div_home2{
+    float: left;
+    margin-left: 10%;
+    margin-top: 60px;
+}
+.img_home2{
+    width: 270px;
+    height: 350px;
+    border: white;
+    border-radius: 200px;
+
+}
+.img_div_home1{
+    float: left;
+    margin-left: 10%;
+    margin-top: 60px;
+}
+.button_home1{
+    background-color: #ff6630;
+    height: 80px;
+    width: 300px;
+    border: #ff6630;
+    border-radius: 60px;
+    margin-left: 20%;
+    margin-top: 80px;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    float: left;
+}
+.button_a_home1{
+    background-color: #ff6630;
+    color: #ffffff;
+}
+.button_home2{
+    color: #565570;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 30px;
+    float: left;
+    margin-top: 110px;
+}
+.button_home2_img{
+    float: left;
+    height: 30px;
+    width: 30px;
+    margin-top: 110px;
+    margin-left: 50px;
+}
+.home3{
+    height: 550px;
+    width: 100%;
+}
+.home{
+    height: 850px;
+    width: 100%;
+}
+.img_home3_1{
+    height: 250px;
+    width: 380px;
+    border: white;
+    border-radius: 200px;
+
+}
+.home_text3{
+    color: #565570;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+.img_div_home3{
+    width: 33%;
+    float: left;
+    text-align: center;
+}
+.img_div_home4{
+    width: 34%;
+    float: left;
+}
+.img_div_home5{
+    width: 33%;
+    float: left;
+
+}
+.home_text4{
+    color: #0e0073;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.5em;
+    margin-top: 8px;
+}
+.circle_green{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: url("/static/main/images/2.png");
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background-size: cover;
+}
+.circle_red{
+    width: 230px;
+    height: 230px;
+    margin-top: 20px;
+    border-radius: 50%;
+    background: url("/static/main/images/1.png");
+    background-size: cover;
+    right: -60%;
+    position: absolute;
+}
+.footer_dog{
+    width: 360px;
+    height: 470px;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+    float: left;
+
+}
+.home4{
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.footer_text1{
+    color: #0e0073;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 38px;
+    font-weight: bold;
+    text-align: left;
+    line-height: 1.5em;
+    padding-top: 70px;
+
+}
+.footer_text2{
+    color: #0e0073;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    line-height: 2em;
+
+}
+
+.footer_dog_div{
+    margin-left: 33%;
+    width: 600px;
+}
+.login_div{
+    width: 50%;
+    height: 600px;
+    background-color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    border-radius: 30px;
+    box-shadow: 4px 4px 49px 10px rgba(34, 60, 80, 0.2);
+}
+.login_div2{
+    float: right;
+    width: 35%;
+    height: 100%;
+    background: url("/static/main/images/5.png");
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    filter: blur(5px);
+    background-size: cover;
+}
+.login_name{
+    margin-top: 100px;
+    color: #0e0073;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 38px;
+    font-weight: bold;
+    margin-left: 50%;
+}
+
+.login_div3{
+    float: left;
+    background-color: white;
+    margin-top: 30px;
+    height: 500px;
+}
+.login_form{
+    background-color: white;
+}
+.login_email_form{
+    margin-top: 50px;
+    margin-left: 50%;
+    width: 269px;
+    height: 30px;
+    background-color: #f8f8ff;
+    border: none;
+    border-radius: 30px;
+    padding: 5px;
+    box-shadow: 2px 4px 23px 7px rgba(34, 60, 80, 0.2);
+}
+.login_password_form{
+    margin-top: 50px;
+    margin-left: 50%;
+    width: 269px;
+    height: 30px;
+    background-color: #f8f8ff;
+    border: none;
+    border-radius: 30px;
+    padding: 5px;
+    box-shadow: 2px 4px 23px 7px rgba(34, 60, 80, 0.2);
+}
+.login_button{
+    margin-top: 50px;
+    margin-left: 50%;
+    width: 269px;
+    height: 30px;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 2px 4px 23px 7px rgba(34, 60, 80, 0.2);
+}
+.register_email_form{
+    margin-top: 50px;
+    margin-left: 50%;
+    width: 269px;
+    height: 30px;
+    background-color: #f8f8ff;
+    border: none;
+    border-radius: 30px;
+    padding: 5px;
+    box-shadow: 2px 4px 23px 7px rgba(34, 60, 80, 0.2);
+}
+.register_username_form{
+    margin-top: 50px;
+    margin-left: 50%;
+    width: 269px;
+    height: 30px;
+    background-color: #f8f8ff;
+    border: none;
+    border-radius: 30px;
+    padding: 5px;
+    box-shadow: 2px 4px 23px 7px rgba(34, 60, 80, 0.2);
+}
+.register_password_form{
+    margin-top: 50px;
+    margin-left: 50%;
+    width: 269px;
+    height: 30px;
+    background-color: #f8f8ff;
+    border: none;
+    border-radius: 30px;
+    padding: 5px;
+    box-shadow: 2px 4px 23px 7px rgba(34, 60, 80, 0.2);
+}
+.register_password2_form{
+    margin-top: 50px;
+    margin-left: 50%;
+    width: 269px;
+    height: 30px;
+    background-color: #f8f8ff;
+    border: none;
+    border-radius: 30px;
+    padding: 5px;
+    box-shadow: 2px 4px 23px 7px rgba(34, 60, 80, 0.2);
+}
+.register_name{
+   margin-top: 30px;
+    color: #0e0073;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 38px;
+    font-weight: bold;
+    margin-left: 50%;
+}
+.owner_list_main{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 2px 4px 23px 7px rgba(34, 60, 80, 0.2);
+    height: 800px;
+    border-radius: 30px;
+    margin-top: 50px;
+}
+.owner_list_button{
+    float: right;
+    margin-right: 30px;
+    margin-top: 25px;
+    height:40px;
+    width: 120px;
+    border-radius: 20px;
+    border: none;
+    background-color: #ff6630;
+    box-shadow: 2px 4px 23px 7px rgba(34, 60, 80, 0.2);
+}
+.owner_list_button_text{
+    background-color: #ff6630;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+.owner_list_div{
+    height: 300px;
+    width: 200px;
+    box-shadow: 2px 4px 23px 7px rgba(34, 60, 80, 0.2);
+    margin-top: 100px;
+    margin-left: 50px;
+    display:inline-block;
+    border-radius: 20px;
+}
+.owner_list_pet_image{
+    width: 180px;
+    height: 230px;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.owner_list_pet_name_div{
+    width: 180px;
+    height: 50px;
+    background-color: #ff6630;
+    border-radius: 10px;
+    margin-left: 10px;
+    text-align: center;
+}
+.owner_list_pet_name {
+    background-color: #ff6630;
+    border-radius: 10px;
+    color: white;
+    margin-top: 24px;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 2.4em;
+}
+.pet_detail_logo{
+    font-size: 44px;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    padding-top: 30px;
+}
+.pet_detail_image {
+    width: 360px;
+    height: 460px;
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-top: 50px;
+    box-shadow: 2px 4px 23px 7px rgba(34, 60, 80, 0.4);
+    float: left;
+}
+.pet_detail_name_div{
+    margin-left: 50px;
+    margin-top: 50px;
+    float: left;
+
+}
+.pet_detail_name_logo{
+    font-size: 16px;
+    color: #7e7f7c;
+    font-family: 'Montserrat', sans-serif;
+}
+.pet_detail_name{
+    font-size: 36px;
+    font-family: 'Montserrat', sans-serif;
+}
+.pet_detail_kind_div{
+    margin-top: 200px;
+    margin-left: 100px;
+
+}
+.pet_detail_kind_logo{
+    margin-left: 50px;
+    font-size: 16px;
+    color: #7e7f7c;
+    font-family: 'Montserrat', sans-serif;
+}
+.pet_detail_kind{
+    margin-left: 50px;
+    font-size: 28px;
+    font-family: 'Montserrat', sans-serif;
+}
+.pet_detail_gender_logo{
+    font-size: 16px;
+    color: #7e7f7c;
+    font-family: 'Montserrat', sans-serif;
+}
+.pet_detail_gender{
+    font-size: 28px;
+    font-family: 'Montserrat', sans-serif;
+}

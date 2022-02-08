@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+<title>{% block title %}НРЖ{% endblock %}</title>
+
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+{% block content %}
+
+    {% include 'menu.html' %}
+
+        <div class="owner_list_main">
+            <p class="pet_detail_logo">Паспорт питомца</p>
+            <img class="pet_detail_image" src="{{ pet.image.url }}">
+            <div class="pet_detail_name_div">
+                <p class="pet_detail_name_logo">Кличка</p>
+                <p class="pet_detail_name">{{pet.name}}</p>
+            </div>
+            <div class="pet_detail_kind_div">
+                <p class="pet_detail_kind_logo">Вид</p>
+                <p class="pet_detail_kind">{{pet.catordog}}</p>
+                <p class="pet_detail_gender_logo">Пол</p>
+                <p class="pet_detail_gender">{{pet.gender}}</p>
+
+            </div>
+        </div>
+{% endblock %}

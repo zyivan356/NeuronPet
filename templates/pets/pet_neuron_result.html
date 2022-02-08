@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+<title>{% block title %}НРЖ{% endblock %}</title>
+
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+{% block content %}
+
+    {% include 'menu.html' %}
+
+                <p>{{result_text}}</p>
+{% endblock %}

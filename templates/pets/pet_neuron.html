@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+<title>{% block title %}Определение{% endblock %}</title>
+
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+{% block content %}
+
+
+		{% include 'menu.html' %}
+
+
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{form}}
+                    <button type="submit" class="post_form_button"><p class="text_button">определить</p></button>
+                </form>
+
+
+
+{% endblock %}

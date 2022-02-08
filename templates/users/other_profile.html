@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+<title>{% block title %}{{ user.username }}{% endblock %}</title>
+
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+{% block content %}
+
+    {% include 'menu.html' %}
+
+
+
+    <div class="other_profile_main_div">
+        <div class="other_profile_avatar_and_username">
+            <img src="{{ user.avatar.url }}" class="other_profile_avatar">
+            <div class="other_profile_username_and_description">
+                <p class="other_profile_username">{{ user.username }}</p>
+                <p class="other_profile_description">{{ user.description }}</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="courses_main">
+    <hr class="course_detail_main2_hr">
+        <div class="div_category_logo">
+            {% if category %}
+                <p class="category_logo">Курсы в категории {{ category.name }}:</p>
+            {% else %}
+                <p class="category_logo">Все курсы от {{ user.username }}:</p>
+            {% endif %}
+        </div>
+            <div class="category_list">
+                <p class="category_list_name">Категории:</p>
+                <hr class="category_list_hr">
+                <a class="category_list_name" href="{% url 'courses:courses_list' %}">Все</a>
+                <hr class="category_list_hr">
+                {% for category in categories %}
+                    <a class="category_list_name" href="{{ category.get_absolute_url }}">{{ category.name }}</a>
+                    <hr class="category_list_hr">
+                {% endfor %}
+
+            </div>
+                <div class="courses_list">
+                    {% for course in course %}
+                        <div class="courses_product">
+                            <div class="courses_preview"><img src="{{ course.preview.url }}" class="courses_preview_image"></div>
+                            <div class="courses_product_text_div">
+                                <a href="{{ course.get_absolute_url }}" class="courses_product_name">{{ course.title }}</a>
+                                <p class="courses_product_description">{{ course.description }}</p>
+                                <p class="courses_product_author">{{ course.author.username }}</p>
+                                <p class="courses_product_time">Всего {{ course.duration }} часов • {{ course.amount }} лекций</p>
+                            </div>
+                            <p class="courses_product_price">{{ course.price }} руб.</p>
+                        </div>
+                        <hr class="courses_product_hr">
+                    {% endfor %}
+                </div>
+            </div>
+{% endblock %}
