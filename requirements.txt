@@ -5,8 +5,15 @@ backports.zoneinfo==0.2.1
 cachetools==5.0.0
 certifi==2021.10.8
 charset-normalizer==2.0.10
+cycler==0.11.0
 dj-database-url==0.5.0
 Django==4.0.1
+flatbuffers==2.0
+fonttools==4.29.0
+gast==0.4.0
+google-auth==2.5.0
+google-auth-oauthlib==0.4.6
+google-pasta==0.2.0
 grpcio==1.43.0
 gunicorn==20.1.0
 h5py==3.6.0
@@ -40,8 +47,11 @@ tensorboard-plugin-wit==1.8.1
 tensorflow==2.7.0
 tensorflow-estimator==2.7.0
 tensorflow-io-gcs-filesystem==0.23.1
+termcolor==1.1.0
+typing_extensions==4.0.1
 tzdata==2021.5
 urllib3==1.26.8
+Werkzeug==2.0.2
 whitenoise==5.3.0
 wrapt==1.13.3
 zipp==3.7.0
