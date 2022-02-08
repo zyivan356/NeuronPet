@@ -33,7 +33,7 @@ SECRET_KEY = SECRET_KEY
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ALLOWED_HOSTS = ['0.0.0.0', 'neuronpet.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['0.0.0.0', 'neuronpet.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
