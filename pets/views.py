@@ -39,7 +39,7 @@ def neuron_network(request):
             form = PostForm()
 
 
-            data_dir = pathlib.Path("s3://data-set-storage/dataset/training_set/")
+            data_dir = pathlib.Path("dataset/training_set/")
 
             image_count = len(list(data_dir.glob('*/*.jpg')))
 
