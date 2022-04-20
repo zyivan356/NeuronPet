@@ -36,7 +36,7 @@ a{
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     font-weight: bold;
-    margin-left: 10%;
+    margin-left: 7%;
 }
 .home1{
     float: left;
@@ -437,27 +437,113 @@ a{
     font-family: 'Montserrat', sans-serif;
 }
 .pet_detail_kind_div{
-    margin-top: 200px;
+    margin-top: 160px;
     margin-left: 100px;
 
 }
 .pet_detail_kind_logo{
-    margin-left: 50px;
+    margin-left: 360px;
     font-size: 16px;
     color: #7e7f7c;
     font-family: 'Montserrat', sans-serif;
 }
 .pet_detail_kind{
-    margin-left: 50px;
+    margin-left: 360px;
     font-size: 28px;
     font-family: 'Montserrat', sans-serif;
 }
 .pet_detail_gender_logo{
+    margin-top: 20px;
+    margin-left: 360px;
     font-size: 16px;
     color: #7e7f7c;
     font-family: 'Montserrat', sans-serif;
 }
 .pet_detail_gender{
+    margin-left: 360px;
     font-size: 28px;
     font-family: 'Montserrat', sans-serif;
+}
+
+.pet_detail_gender_kind_div{
+}
+.pet_detail_description_logo{
+    margin-top: 20px;
+    margin-left: 460px;
+    font-size: 16px;
+    color: #7e7f7c;
+    font-family: 'Montserrat', sans-serif;
+
+}.pet_detail_description{
+     margin-left: 460px;
+    font-size: 28px;
+    font-family: 'Montserrat', sans-serif;
+}
+.neuron_form {
+    text-align: center;
+    margin-top: 50px;
+}
+.pet_detail_birthday{
+    margin-left: 460px;
+    font-size: 28px;
+    font-family: 'Montserrat', sans-serif;
+}
+.pet_detail_birthday_logo{
+    margin-top: 20px;
+    margin-left: 460px;
+    font-size: 16px;
+    color: #7e7f7c;
+    font-family: 'Montserrat', sans-serif;
+}
+.neuron_logo{
+    text-align: center;
+    font-size: 28px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    margin-top: 50px;
+}
+.neuron_button{
+    padding: 2px;
+}
+.result_text{
+    text-align: center;
+    font-size: 28px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    margin-top: 50px;
+}
+.pet_form_name{
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+}
+
+.pet_form_catordog {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+}
+.pet_form_birthday{
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+}
+.pet_form_gender{
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+}
+.pet_form_description{
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+}
+.pet_form_button{
+    margin-top: 100px;
+    margin-left: 46%;
+    width: 150px;
+    border-radius: 30px;
+}
+.text_button10{
+    margin-bottom: 20px;
 }
