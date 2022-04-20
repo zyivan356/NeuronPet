@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+<title>{% block title %}Определение{% endblock %}</title>
+
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+{% block content %}
+
+
+		{% include 'menu.html' %}
+    {% block mycss %} <style>
+    p{
+        text-align: center;
+        font-size: 16px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: normal;
+        margin-top: 20px;
+    }
+    </style> {% endblock %}
+
+                <form method="post" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <button type="submit" class="pet_form_button"><p class="text_button10">Добавить</p></button>
+                </form>
+
+
+{% endblock %}
