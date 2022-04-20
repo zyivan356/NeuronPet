@@ -1,3 +1,4 @@
+import datetime
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Pet, Classification_pet
 from datetime import date
@@ -7,13 +8,14 @@ import os
 import PIL
 from PIL import Image
 import tensorflow as tf
-from .forms import PostForm
+from .forms import PostForm, PetForm
 
 from tensorflow import keras
 from tensorflow.keras import layers, datasets, models
 from tensorflow.keras.models import Sequential
 
 import pathlib
+
 
 
 def main(request):
@@ -29,6 +31,17 @@ def pet_detail(request, id):
     pet = get_object_or_404(Pet, id=id)
     return render(request, 'pets/pet_detail.html', {'pet': pet})
 
+def pet_create(request):
+    form = PetForm(request.POST, request.FILES or None)
+    if request.method == 'POST':
+
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.owner = request.user
+            post.save()
+            form = PetForm()
+    return render(request, 'pets/pet_form.html', {'form': form})
+
 def neuron_network(request):
     form = PostForm(request.POST, request.FILES or None)
     if request.method == 'POST':
@@ -38,13 +51,15 @@ def neuron_network(request):
             post.save()
             form = PostForm()
 
+            # Загузка набора данных
+            data_dir = pathlib.Path("C:\\Users\\zyiva\\PycharmProjects\\NeuronPet\\pets\\dataset\\training_set")
 
-            data_dir = pathlib.Path("https://data-set-storage.s3.amazonaws.com/dataset/training_set/")
+            #image_count = len(list(data_dir.glob('*/*.jpg')))
 
-            image_count = len(list(data_dir.glob('*/*.jpg')))
-
+            # Загрузить данные с помощью утилиты Keras
+            # Создать набор данных
             batch_size = 32
-            img_height = 200  # высота изображения в пикселях
+            img_height = 200 # высота изображения в пикселях
             img_width = 200  # ширина изображения в пикселях
 
             # Данные для тренировки
@@ -56,6 +71,7 @@ def neuron_network(request):
                 image_size=(img_height, img_width),
                 batch_size=batch_size)
 
+            # Данные для проверки
             val_ds = tf.keras.utils.image_dataset_from_directory(
                 data_dir,
                 validation_split=0.2,
@@ -66,23 +82,21 @@ def neuron_network(request):
 
             class_names = train_ds.class_names
 
-            # Настройить набор данных для повышения эффективности
+
             AUTOTUNE = tf.data.AUTOTUNE
 
-            # Dataset.cache сохраняет изображения в памяти после их загрузки с диска в течение первой эпохи.
-            # Это гарантирует, что набор данных не станет узким местом при обучении  модели.
+
             train_ds = train_ds.cache().shuffle(1000).prefetch(buffer_size=AUTOTUNE)
-            # Dataset.prefetch перекрывает предварительную обработку данных и выполнение модели во время обучения
+
             val_ds = val_ds.cache().prefetch(buffer_size=AUTOTUNE)
 
-            # Стандартизировать данные
+
             normalization_layer = tf.keras.layers.Rescaling(1. / 255)
 
             normalized_ds = train_ds.map(lambda x, y: (normalization_layer(x), y))
             image_batch, labels_batch = next(iter(normalized_ds))
-            first_image = image_batch[0]
-            # Notice the pixel values are now in `[0,1]`.
-            # print(np.min(first_image), np.max(first_image))
+            #first_image = image_batch[0]
+
 
             num_classes = len(class_names)
 
@@ -97,14 +111,6 @@ def neuron_network(request):
                 ]
             )
 
-            # plt.figure(figsize=(10, 10))
-            # for images, _ in train_ds.take(1):
-            #     for i in range(9):
-            #         augmented_images = data_augmentation(images)
-            #         ax = plt.subplot(3, 3, i + 1)
-            #         plt.imshow(augmented_images[0].numpy().astype("uint8"))
-            #         plt.axis("off")
-            #     plt.show()
 
             model = Sequential([
                 data_augmentation,
@@ -127,7 +133,7 @@ def neuron_network(request):
 
             # model.summary()
 
-            epochs = 1
+            epochs = 4
             history = model.fit(
                 train_ds,
                 validation_data=val_ds,
@@ -144,8 +150,6 @@ def neuron_network(request):
 
             path = post.image.path
 
-            # picture = Image.open(path)
-            # picture.show()
 
             img = tf.keras.utils.load_img(
                 path, target_size=(img_height, img_width)
